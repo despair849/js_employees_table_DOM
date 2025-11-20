@@ -42,7 +42,7 @@ headers.forEach((header, index) => {
       currentSort.order = 'asc';
     }
 
-    sortTable(index, currentSort.order);
+    sortTable(index);
   });
 });
 
@@ -67,6 +67,7 @@ form.innerHTML = `
   <label>Position: <input name="position" type="text" data-qa="position" required></label>
   <label>Office:
     <select name="office" data-qa="office" required>
+      <option value="" disabled selected>Select office</option>
       <option>Tokyo</option>
       <option>Singapore</option>
       <option>London</option>
@@ -119,6 +120,8 @@ form.addEventListener('submit', (e) => {
 
   if (employeePosition.length < 2) {
     showNotification('Position must be at least 2 characters', 'error');
+
+    return;
   }
 
   if (employeeAge < 18 || employeeAge > 90) {
