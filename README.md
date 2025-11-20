@@ -43,6 +43,10 @@ Start table:
 <label>Name: <input name="name" type="text"></label>
 ```
 - Add qa attributes for each input field:
+
+
+
+
 ```
  data-qa="name"
  data-qa="position"
