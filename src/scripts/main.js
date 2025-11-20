@@ -76,7 +76,7 @@ form.innerHTML = `
       <option>San Francisco</option>
     </select>
   </label>
-  <label>Age: <input name="age" type="text" data-qa="age" required></label>
+  <label>Age: <input name="age" type="number" data-qa="age" required></label>
   <label>Salary: <input name="salary" type="number" data-qa="salary" required></label>
   <button type="submit" data-qa="save">Save to table</button>
   `;
